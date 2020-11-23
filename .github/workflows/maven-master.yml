@@ -7,7 +7,7 @@ on:
 jobs:
   build_and_test:
     name: Build and test with Maven
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
@@ -29,7 +29,7 @@ jobs:
 
   push_to_registry:
     name: Push Docker image to Docker Hub
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
@@ -44,7 +44,7 @@ jobs:
 
   create_release:
     name: Create a release on Github
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
