@@ -1,8 +1,7 @@
 name: Java CI with Maven
 
 on:
-  push:
-    branch: master
+  workflow-dispatch
 
 jobs:
   build_and_test:
@@ -42,6 +41,7 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: everrycken/bs2-pe3-master
+          tag_with_ref: true
 
   create_release:
     name: Create a release on Github
