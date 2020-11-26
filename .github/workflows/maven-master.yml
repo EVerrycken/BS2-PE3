@@ -40,7 +40,7 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: everrycken/bs2-pe3-master
-          tag_with_ref: true
+          tags: everrycken/bs2-pe3-master:latest
 
   create_release:
     name: Create a release on Github
